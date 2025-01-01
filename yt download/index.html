@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Me Downloader</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #ff6a00, #ee0979);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            background-color: #1e1e2f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff8700;
+        }
+
+        /* Container styles */
+        .section {
+            margin-top: 100px; /* To avoid overlap with fixed navbar */
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Input field */
+        input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Dropdown */
+        select {
+            width: calc(100% - 40px);
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        button {
+            padding: 12px 20px;
+            background-color: #ff6a00;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #ff8700;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            height: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        /* Footer */
+.footer {
+    padding: 20px;
+    background: #1e1e2f;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto; /* Push footer to the bottom */
+    color: white;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #ff8700;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer strong {
+    font-weight: bold;
+}
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            input[type="text"],
+            select {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <h1>Use Me Downloader</h1>
+        <ul>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Video Download Section -->
+    <div class="section" id="download">
+        <h2>Download Videos Effortlessly</h2>
+        <p>Paste the URL, select a platform, and download your video in seconds.</p>
+
+        <select id="platformSelect">
+            <option value="youtube">YouTube</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="twitter">Twitter</option>
+        </select>
+
+        <input type="text" id="urlInput" placeholder="Enter the video URL">
+
+        <button id="downloadBtn">Download Now</button>
+
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p id="statusMessage"></p>
+    </div>
+
+    <!-- About Section -->
+    <div class="section" id="about">
+        <h2>About Use Me Downloader</h2>
+        <p>Use Me Downloader is your one-stop solution for downloading videos from popular platforms. 
+           With our user-friendly interface and fast processing, you can save videos effortlessly.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+<div class="footer" id="contact">
+    <p>Contact Us:</p>
+    <p><strong>Name:</strong> <strong>Gowtham Karthik</strong></p>
+    <p><strong>Mobile:</strong> +91-8328474144</p>
+    <p><strong>Email:</strong> <a href="mailto:gowtham2482005@gmail.com">gowtham2482005@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gowthamkarthik" target="_blank">www.linkedin.com/in/gowthamkarthik</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kartik_.k24" target="_blank">instagram.com/kartik_.k24</a></p>
+    <p>&copy; 2024 Use Me Downloader. All rights reserved.</p>
+</div>
+
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            const url = document.getElementById("urlInput").value.trim();
+            const platform = document.getElementById("platformSelect").value;
+
+            if (!url) {
+                alert("Please enter a valid URL");
+                return;
+            }
+
+            document.getElementById("statusMessage").textContent = "Downloading...";
+            document.getElementById("progressContainer").style.display = "block";
+            let progress = 0;
+
+            const progressInterval = setInterval(() => {
+                progress += 10;
+                document.getElementById("progressBar").style.width = progress + "%";
+
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    document.getElementById("statusMessage").textContent = 
+                        `Your ${platform.charAt(0).toUpperCase() + platform.slice(1)} video is ready!`;
+                }
+            }, 300);
+        });
+    </script>
+</body>
+</html>
